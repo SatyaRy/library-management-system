@@ -33,12 +33,12 @@ Ensure the following dependencies are installed on your system:
 ### Dependency Installation
 Install required project dependencies:
 ```bash
-npm install
+npm install```
 
 ### 🚀 Running the Application
 To run the application in development mode:
 ```bash
-npm run dev 
+npm run dev ```
 ---
 
 ### Environment Variables
