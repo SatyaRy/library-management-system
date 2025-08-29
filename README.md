@@ -30,6 +30,13 @@ Ensure the following dependencies are installed on your system:
 - **PostgreSQL** (v14.x or later)  
 - **Docker** (v20.x or later)  
 
+### Dependency Installation
+Install required project dependencies:
+````npm install ```
+
+### 🚀 Running the Application
+To run the application in development mode:
+```npm run dev```
 ---
 
 ### Environment Variables
