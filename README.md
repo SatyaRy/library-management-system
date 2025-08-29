@@ -12,12 +12,12 @@ This backend ensures smooth interaction with the database and provides the found
 ---
 
 ## 📑 Table of Contents
-1. [Setup and Installation](#-setup-and-installation)  
+1. [Setup and Installation](#setup-and-installation)  
    - [Prerequisites](#prerequisites)  
    - [Environment Variables](#environment-variables)  
    - [Dependency Installation](#dependency-installation)  
-2. [Running the Application](#-running-the-application)  
-3. [Production Build](#-production-build)  
+2. [Running the Application](#running-the-application)  
+3. [Production Build](#production-build)  
 
 ---
 
