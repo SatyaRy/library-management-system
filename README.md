@@ -30,17 +30,6 @@ Ensure the following dependencies are installed on your system:
 - **PostgreSQL** (v14.x or later)  
 - **Docker** (v20.x or later)  
 
-### Dependency Installation
-Install required project dependencies:
-```bash
-npm install```
-
-### 🚀 Running the Application
-To run the application in development mode:
-```bash
-npm run dev ```
----
-
 ### Environment Variables
 Create a `.env` file in the root directory based on `.env.example`.  
 This file holds sensitive credentials such as database configuration and API keys.
