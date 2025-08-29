@@ -1,52 +1,43 @@
-Library Manager System Backend
-Introduction
-This repository contains the backend services for the Library Manager System application. This service provides the core business logic and data management for a comprehensive library system, including:
+# 📚 Library Manager System - Backend
 
-Adding book 
-Update book 
-Search book
+The **Library Manager System Backend** is the core service that powers the Library Manager application.  
+It encapsulates the **business logic** and **data management layer** of a comprehensive digital library, enabling functionalities such as:
 
-Table of Contents
+- ➕ Adding new books  
+- ✏️ Updating book details  
+- 🔍 Searching for books  
 
-Setup and Installation
+This backend ensures smooth interaction with the database and provides the foundation for efficient library operations.
 
-Running the Application
+---
 
-1. Setup and Installation
-Prerequisites
-Ensure you have the following installed on your machine:
+## 📑 Table of Contents
+1. [Setup and Installation](#-setup-and-installation)  
+   - [Prerequisites](#prerequisites)  
+   - [Environment Variables](#environment-variables)  
+   - [Dependency Installation](#dependency-installation)  
+2. [Running the Application](#-running-the-application)  
+3. [Production Build](#-production-build)  
 
-Node.js (version 18.x or later)
+---
 
-PostgreSQL (version 14.x or later)
+## ⚙️ Setup and Installation
 
-Docker (version 20.x or later)
+### Prerequisites
+Ensure the following dependencies are installed on your system:
 
-Environment Variables
-Create a .env file in the root directory of the project based on the provided .env.example file. This file contains sensitive configuration details such as database credentials and API keys.
+- **Node.js** (v18.x or later)  
+- **PostgreSQL** (v14.x or later)  
+- **Docker** (v20.x or later)  
 
-# Example .env file content
+---
+
+### Environment Variables
+Create a `.env` file in the root directory based on `.env.example`.  
+This file holds sensitive credentials such as database configuration and API keys.
+
+**Example `.env` file:**
+```env
 DATABASE_URL=postgres://user:password@host:port/database
 API_KEY=your_api_key_here
 NODE_ENV=development
-
-
-Dependency Installation
-Install the required project dependencies:
-
-# For Node.js
-npm install
-
-# For Node.js
-npm run dev
-
-The application will be accessible at http://localhost:[port].
-
-Production Build
-For production environments, use the following commands:
-
-# Build the application
-npm run build
-
-# Start the production server
-npm start
