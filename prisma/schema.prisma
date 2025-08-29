@@ -14,19 +14,11 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Author{
-  authorID Int @id @default(autoincrement()) @map("author_id")
-  name String
-  bio String? 
-  book Book[]
-}
-
 model Book{
   bookID Int  @id @default(autoincrement()) @map("book_id")
-  authorID Int @unique
   title String 
+  authorName String @map("author_name")
   category String 
-  publishedDate DateTime @map("publised_date")
-  isAvailable   Boolean
-  author Author @relation(fields: [authorID], references: [authorID])
+  publishedDate String @map("published_date")
+  isAvailable   Boolean @map("is_available")
 }
