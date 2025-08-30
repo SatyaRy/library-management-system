@@ -9,7 +9,7 @@ app.use(cors())
 app.use(express.json())
 app.use(route)
 app.get("/", (req, res) => {
-  res.send("Hello, Library Manager!");
+  res.send("Welcome to library management system");
 });
 
 app.listen(port,()=>{
