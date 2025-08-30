@@ -17,7 +17,7 @@ Simple library management system where the admin can:
 
 ## 📂 Project Structure
 
-```bash
+```` ```bash ```` 
 └── library-management-system/
     ├── prisma/
     │   ├── migrations
@@ -34,8 +34,8 @@ Simple library management system where the admin can:
     ├── .env
     ├── .gitignore
     └── README.md
-```bash
- 
+ ```` ``` ````
+
 ## ⚙️ Setup and Installation
 
 ### Prerequisites
