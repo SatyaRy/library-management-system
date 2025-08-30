@@ -3,17 +3,38 @@
 Simple library management system where the admin can:
 -   Adding new books  
 -   Updating book details 
--   filtering books by ID, author name, category, and  published date.
+-   Filtering books by ID, author name, category, and  published date.
+-   Delete book by ID
 
 ---
 
 ## 📑 Table of Contents
-1. [Setup and Installation](#setup-and-installation)  
+1. [Setup and Installation](#setup-and-installation)
+   - [Project Structure)($project-structure)
    - [Prerequisites](#prerequisites)  
    - [Environment Variables](#environment-variables)  
 ---
 
 ## ⚙️ Setup and Installation
+
+### Project Structure 
+.
+└── library-management-system/
+    ├── prisma/
+    │   ├── migrations
+    │   ├── schema.prisma
+    │   └── seed.ts
+    ├── src/
+    │   ├── controller/
+    │   │   └── book.controller.ts
+    │   ├── service/
+    │   │   └── book.service.ts
+    │   ├── routes/
+    │   │   └── routes.ts
+    │   └── app.ts
+    ├── .env
+    ├── .gitignore
+    └── readme.md
 
 ### Prerequisites
 Ensure the following dependencies are installed on your system:
