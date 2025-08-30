@@ -35,7 +35,7 @@ bash```
     ├── .env
     ├── .gitignore
     └── readme.md
-```bash
+```
 ### Prerequisites
 Ensure the following dependencies are installed on your system:
 
