@@ -17,8 +17,9 @@ Simple library management system where the admin can:
 
 ## ⚙️ Setup and Installation
 
-### Project Structure 
-bash```
+## 📂 Project Structure
+
+```bash
 └── library-management-system/
     ├── prisma/
     │   ├── migrations
@@ -34,8 +35,8 @@ bash```
     │   └── app.ts
     ├── .env
     ├── .gitignore
-    └── readme.md
-```
+    └── README.md
+    
 ### Prerequisites
 Ensure the following dependencies are installed on your system:
 
