@@ -1,13 +1,9 @@
 # 📚 Library Manager System - Backend
 
-The **Library Manager System Backend** is the core service that powers the Library Manager application.  
-It encapsulates the **business logic** and **data management layer** of a comprehensive digital library, enabling functionalities such as:
-
-- ➕ Adding new books  
-- ✏️ Updating book details  
-- 🔍 Searching for books  
-
-This backend ensures smooth interaction with the database and provides the foundation for efficient library operations.
+Simple library management system where the admin can:
+-   Adding new books  
+-   Updating book details 
+-   filtering books by ID, author name, category, and  published date.
 
 ---
 
@@ -23,8 +19,6 @@ This backend ensures smooth interaction with the database and provides the found
 Ensure the following dependencies are installed on your system:
 
 - **Node.js** (v18.x or later)  
-- **PostgreSQL** (v14.x or later)  
-- **Docker** (v20.x or later)  
 
 ### Environment Variables
 Create a `.env` file in the root directory based on `.env.example`.  
