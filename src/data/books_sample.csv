@@ -1,0 +1,21 @@
+title,authorName,isAvailable,category,publishedDate
+The Great Gatsby,F. Scott Fitzgerald,True,Classic,1925-04-10
+To Kill a Mockingbird,Harper Lee,True,Classic,1960-07-11
+1984,George Orwell,False,Dystopian,1949-06-08
+Pride and Prejudice,Jane Austen,True,Romance,1813-01-28
+The Catcher in the Rye,J.D. Salinger,True,Fiction,1951-07-16
+Moby-Dick,Herman Melville,False,Adventure,1851-10-18
+Brave New World,Aldous Huxley,True,Dystopian,1932-08-31
+The Hobbit,J.R.R. Tolkien,True,Fantasy,1937-09-21
+War and Peace,Leo Tolstoy,False,Historical,1869-01-01
+Crime and Punishment,Fyodor Dostoevsky,True,Philosophical,1866-01-01
+The Odyssey,Homer,True,Epic,0800-01-01
+Les Misérables,Victor Hugo,False,Historical,1862-04-03
+Jane Eyre,Charlotte Brontë,True,Gothic,1847-10-16
+Animal Farm,George Orwell,True,Satire,1945-08-17
+The Alchemist,Paulo Coelho,True,Fiction,1988-04-15
+Harry Potter and the Sorcerer's Stone,J.K. Rowling,True,Fantasy,1997-06-26
+The Lord of the Rings,J.R.R. Tolkien,False,Fantasy,1954-07-29
+The Da Vinci Code,Dan Brown,True,Thriller,2003-03-18
+The Kite Runner,Khaled Hosseini,True,Drama,2003-05-29
+Life of Pi,Yann Martel,True,Fiction,2001-09-11
