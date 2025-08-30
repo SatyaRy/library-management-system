@@ -35,7 +35,7 @@ Simple library management system where the admin can:
     ├── .env
     ├── .gitignore
     └── readme.md
-
+```bash
 ### Prerequisites
 Ensure the following dependencies are installed on your system:
 
