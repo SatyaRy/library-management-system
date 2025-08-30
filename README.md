@@ -15,8 +15,6 @@ Simple library management system where the admin can:
    - [Environment Variables](#environment-variables)  
 ---
 
-## ⚙️ Setup and Installation
-
 ## 📂 Project Structure
 
 ```bash
@@ -37,6 +35,8 @@ Simple library management system where the admin can:
     ├── .gitignore
     └── README.md
     
+## ⚙️ Setup and Installation
+
 ### Prerequisites
 Ensure the following dependencies are installed on your system:
 
