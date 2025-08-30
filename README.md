@@ -18,7 +18,7 @@ Simple library management system where the admin can:
 ## ⚙️ Setup and Installation
 
 ### Project Structure 
-```bash
+bash```
 └── library-management-system/
     ├── prisma/
     │   ├── migrations
