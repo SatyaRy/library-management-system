@@ -34,7 +34,7 @@ Simple library management system where the admin can:
     ├── .env
     ├── .gitignore
     └── README.md
-___
+```
 
 ## ⚙️ Setup and Installation
 
