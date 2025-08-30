@@ -31,7 +31,7 @@ Simple library management system where the admin can:
     │   ├── routes/
     │   │   └── routes.ts
     │   └── app.ts
-    ├── .env
+    ├── .env.example
     ├── .gitignore
     └── README.md
 ```
@@ -45,10 +45,20 @@ Ensure the following dependencies are installed on your system:
 
 ### Environment Variables
 Create a `.env` file in the root directory based on `.env.example`.  
-This file holds sensitive credentials such as database configuration and API keys.
+This file holds sensitive credentials such as database configuration.
 
 **Example `.env` file:**
-```env
-DATABASE_URL=postgres://user:password@host:port/database
-API_KEY=your_api_key_here
-NODE_ENV=development
+```bash env
+DATABASE_URL=postgres://user:password@host:port/database 
+```
+
+
+**Install Dependencies**
+```bash 
+npm install 
+```
+
+**Start Server**
+```bash 
+npm run dev 
+```
