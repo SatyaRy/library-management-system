@@ -1,7 +1,7 @@
 # 📚 Library Manager System - Backend
 
 Simple library management system where the admin can:
--   Adding new books  
+-   Adding new books by manually inputting and exporting a CSV file directly.
 -   Updating book details 
 -   Filtering books by ID, author name, category, and  published date.
 -   Delete book by ID
@@ -20,19 +20,21 @@ Simple library management system where the admin can:
 └── library-management-system/
     ├── prisma/
     │   ├── migrations
-    │   ├── schema.prisma
-    │   └── seed.ts
+    │   └── schema.prisma
     ├── src/
-    │   ├── controller/
-    │   │   └── book.controller.ts
+    │   ├── data/
+    │   │   └── books_sample.csv
+    │   ├── interface/
+    │   │   └── bookInterface.ts
     │   ├── service/
-    │   │   └── book.service.ts
-    │   ├── routes/
-    │   │   └── routes.ts
+    │   │   ├── addBook.ts
+    │   │   ├── deleteBook.ts
+    │   │   ├── filterBook.ts
+    │   │   └── updateBook.ts
     │   └── app.ts
-    ├── .env.example
+    ├── .env
     ├── .gitignore
-    └── README.md
+    └── readme.md
 ```
 
 ## ⚙️ Setup and Installation
@@ -57,7 +59,7 @@ DATABASE_URL=postgres://user:password@host:port/database
 npm install 
 ```
 
-**Start Server**
+**Start CLI App**
 ```bash 
 npm run dev 
 ```
