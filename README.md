@@ -9,8 +9,7 @@ Simple library management system where the admin can:
 ---
 
 ## 📑 Table of Contents
-1. [Setup and Installation](#setup-and-installation)
-   - [Project Structure)(#project-structure)
+   - [Project Structure](#project-structure)
    - [Prerequisites](#prerequisites)  
    - [Environment Variables](#environment-variables)  
 ---
