@@ -2,6 +2,7 @@
 import  {PrismaClient,Prisma} from "@prisma/client"
 const prisma = new PrismaClient()
 
+//book data
 export interface Book{
     title: string,
     category: string,
@@ -18,17 +19,20 @@ interface BookResponse{
 
 // query interface
 export interface BookQuery{
+    bookID?: number
     title?: string,
     authorName?: string,
     category?: string,
     publishedDate?: string,
-
+    isAvailable?: boolean
 }
+
 
 //retrieve book
 export const getBookService = async (query: BookQuery): Promise<BookResponse> => {
   try {
     const where: Prisma.BookWhereInput = {};
+    const allBooks = await prisma.book.findMany()
     if (query.title) {
       where.title = { contains: query.title};
     }
@@ -38,21 +42,22 @@ export const getBookService = async (query: BookQuery): Promise<BookResponse> =>
     if (query.category) {
       where.category = { contains: query.category};
     }
-    const books = await prisma.book.findMany({
+    const book = await prisma.book.findMany({
       where: where,
     });
-    if(books.length == 0){
+    if(book.length === 0){
         return {
             status:404,
-            message:"Book is not found"
+            message:"Books are not available!"
         }
-    }
-    return {
-      status: 200,
-      message: {
-        data: books,
-      },
+    }else{
+       return {
+        status: 200,
+        message: {
+          data: allBooks,
+        },
     };
+    }
   } catch (error) {
     console.error("Error in getBookService:", error);
     return {
@@ -65,32 +70,32 @@ export const getBookService = async (query: BookQuery): Promise<BookResponse> =>
 };
 
 //add book 
-export const addBookService = async(bookData:Book): Promise<BookResponse> => {
+export const addBookService = async(data:Book): Promise<BookResponse> => {
     try {
        const isExist = await prisma.book.findFirst({
         where:{
-            title: bookData.title,
-            authorName:bookData.authorName
+            title: data.title,
+            authorName:data.authorName
         }
        })
        if(isExist){
            return {
             status:200,
-            message: `${bookData.title} already exist`
+            message: `${data.title} already exist`
         } 
        }
        await prisma.book.create({
         data:{
-            title: bookData.title,
-            authorName: bookData.authorName,
-            category: bookData.category,
-            publishedDate: bookData.publishedDate,
-            isAvailable: bookData.isAvailable,
+            title: data.title,
+            authorName: data.authorName,
+            category: data.category,
+            publishedDate: data.publishedDate,
+            isAvailable: data.isAvailable,
         }
        })
     return {
         status:200,
-        message: `${bookData.title} book has successfully added to library management`
+        message: `${data.title} book has successfully added to library management`
     }
     } catch (error) {
         console.log(error)
@@ -101,20 +106,12 @@ export const addBookService = async(bookData:Book): Promise<BookResponse> => {
     }
 }
 
-//update book 
-export interface BookUpdateData {
-  title?: string;
-  authorName?: string;
-  category?: string;
-  publishedDate?: string;
-  isAvailable?: boolean;
-}
 
-export const updateBookService = async(bookID: number,updatedBookData: BookUpdateData): Promise<BookResponse> =>{
+export const updateBookService = async(updatedBookData: BookQuery): Promise<BookResponse> =>{
   try {
         await prisma.book.update({
             where: {
-                bookID: bookID
+                bookID: updatedBookData.bookID
             },
             data:{
                 title: updatedBookData.title,
@@ -126,12 +123,45 @@ export const updateBookService = async(bookID: number,updatedBookData: BookUpdat
         })
     return {
             status:500,
-            message: `Book ID: ${bookID} has been updated.`
+            message: `Book ID: ${updatedBookData.bookID} has been updated.`
         }
   } catch (error) {
+    console.log(error)
       return {
             status:500,
             message: error
       }
+  }
+}
+
+
+export const deleteBookService = async(bookID: number): Promise<BookResponse> => {
+  try {
+  const isExist =await prisma.book.findUnique({
+    where:{
+      bookID:bookID
+    }
+  })
+  if(!isExist){
+    return {
+      status:404,
+      message: `book ID: ${bookID} not found`
+    }
+  }
+   await prisma.book.delete({
+      where:{
+        bookID:bookID
+      }
+    })
+    return {
+      status:200,
+      message: `Book ID: ${bookID} has been deleted.`
+    }
+  } catch (error) {
+    console.log(`error on delete service ${error}`)
+    return {
+      status: 500,
+      message: error
+    }
   }
 }
