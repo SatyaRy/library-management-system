@@ -10,11 +10,11 @@ Simple library management system where the admin can:
 
 ## 📑 Table of Contents
    - [Project Structure](#project-structure)
-   - [Prerequisites](#prerequisites)  
+   - [Requirements](#requirements)  
    - [Environment Variables](#environment-variables)  
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```bash  
 └── library-management-system/
@@ -39,7 +39,7 @@ Simple library management system where the admin can:
 
 ## ⚙️ Setup and Installation
 
-### Prerequisites
+### Requirements
 Ensure the following dependencies are installed on your system:
 
 - **Node.js** (v18.x or later)  
